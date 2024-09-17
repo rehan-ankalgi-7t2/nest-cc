@@ -25,23 +25,5 @@ import { AuthService } from './auth.service';
  */
 @Controller('auth')
 export class AuthController {
-  constructor(private authService: AuthService) {
-    this.authService.test(); // calling a function from the auth service class
-  }
-
-  /**
-   * @route /auth/signup
-   */
-  @Post('signup')
-  signup() {
-    return this.authService.signup;
-  }
-
-  /**
-   * @route /auth/signin
-   */
-  @Post('signin')
-  signin() {
-    return this.authService.signin;
-  }
+  constructor(private authService: AuthService) {}
 }
